@@ -16,4 +16,4 @@ with concurrent.futures.ThreadPoolExecutor(max_workers=1) as executor:
         resultado = futuro.result(timeout=timeout_global)
         print("Notebook executado com sucesso!")
     except concurrent.futures.TimeoutError:
-        print(f"Timeout global de {timeout_global} segundos excedido! Abortando...")
+        print('Timeout global de {timeout_global} segundos excedido! Abortando...')
