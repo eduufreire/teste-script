@@ -13,7 +13,6 @@ timeout_global = 300
 with concurrent.futures.ThreadPoolExecutor(max_workers=1) as executor:
     futuro = executor.submit(executar_notebook)
     try:
-        # Espera a execução terminar ou dá timeout
         resultado = futuro.result(timeout=timeout_global)
         print("Notebook executado com sucesso!")
     except concurrent.futures.TimeoutError:
